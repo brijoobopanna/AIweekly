@@ -1,0 +1,158 @@
+/* ===== CSS Paged Media (WeasyPrint) ===== */
+@page {
+    size: A4;
+    margin: 2.5cm 2cm 2.5cm 2cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 10pt;
+        color: #888;
+        font-family: 'Georgia', serif;
+    }
+}
+
+/* ===== Base ===== */
+body {
+    font-family: 'Georgia', serif;
+    font-size: 11pt;
+    color: #1a1a1a;
+    line-height: 1.75;
+    background: #fff;
+}
+
+/* ===== Cover ===== */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 8cm;
+}
+
+.cover .brand-wrap {
+    display: inline-block;
+    text-align: left;
+}
+
+.cover .brand {
+    font-size: 52pt;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.cover .brand-ai {
+    color: #2563eb;
+}
+
+.cover .brand-sep {
+    color: #1a1a1a;
+}
+
+.cover .brand-weekly {
+    color: #1a1a1a;
+}
+
+.cover .brand-rule {
+    width: 130%;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    margin: 0 -15% 0.4em;
+    border-radius: 2px;
+}
+
+.cover .brand-tagline {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #888;
+    margin-bottom: 1.6em;
+}
+
+.cover .issue-date {
+    font-size: 13pt;
+    color: #444;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3em;
+}
+
+.cover .article-count {
+    font-size: 10pt;
+    color: #888;
+    font-style: italic;
+}
+
+/* ===== Article ===== */
+.article {
+    page-break-before: always;
+}
+
+.article-header {
+    border-bottom: 3px solid #1a1a1a;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.6em;
+}
+
+.article h1 {
+    font-size: 28pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 0.3em 0;
+    color: #1a1a1a;
+}
+
+.article .subtitle {
+    font-size: 13pt;
+    font-style: italic;
+    color: #444;
+    margin: 0 0 0.4em 0;
+    line-height: 1.4;
+}
+
+.article .meta {
+    font-size: 9pt;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ===== Article body ===== */
+.article-body p {
+    font-size: 11pt;
+    line-height: 1.75;
+    text-align: justify;
+    hyphens: auto;
+    margin: 0 0 0.85em 0;
+    text-indent: 1.2em;
+}
+
+.article-body p:first-of-type {
+    text-indent: 0;
+}
+
+.article-body p:first-of-type::first-letter {
+    font-size: 3.2em;
+    font-weight: bold;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.08em;
+    margin-top: 0.05em;
+    color: #1a1a1a;
+}
+
+/* ===== Tags + source ===== */
+.article-footer {
+    margin-top: 2em;
+    padding-top: 0.8em;
+    border-top: 1px solid #ccc;
+    font-size: 9pt;
+    color: #888;
+}
+
+.article-footer .tags {
+    margin-bottom: 0.3em;
+}
+
+.article-footer a {
+    color: #555;
+}

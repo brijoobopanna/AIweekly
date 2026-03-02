@@ -1,0 +1,39 @@
+# AI Weekly 
+
+
+# YouTube videos
+https://www.youtube.com/@fryrsquared/videos
+https://www.youtube.com/@DwarkeshPatel/videos
+https://www.youtube.com/@AndrejKarpathy/videos
+
+# arXiv research papers
+https://news.smol.ai/
+
+#Twitter
+https://x.com/karpathy
+
+# Blogs and articles
+#Simon W
+https://simonw.substack.com/
+#2) Sebastian Raschka, PhD.
+https://sebastianraschka.com/blog/?utm_source=linkedin
+#3) Interconnects by Nathan Lambert
+#AI alignment, open-source models, and ecosystem news.
+#https://lnkd.in/g_vAQQTb
+#4) Lil’Log by Lilian Weng (ex VP of Research at OpenAI)
+#https://lnkd.in/g7Pgwsi9
+#5) Chip Huyen
+https://huyenchip.com/blog/
+#6 Eugene Yan (Principal Applied Scientist at Amazon)
+https://lnkd.in/gNz_wn_B
+#7) Philipp Schmid (Senior AI Relation Engineer at https://lnkd.in/grVwHUMk
+#8) Jason Liu
+https://lnkd.in/gZRYBGYp
+#9) Hamel H. (ex GitHub Staff ML Engineer)
+https://lnkd.in/g34R2tKC
+#10) Berkeley Artificial Intelligence Research Blog
+https://lnkd.in/gtaqkPTK
+#11) Hugging Face
+https://huggingface.co/blog
+#12) Google DeepMind
+https://deepmind.google/blog/
