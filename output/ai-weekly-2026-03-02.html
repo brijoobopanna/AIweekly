@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Weekly — March 02, 2026</title>
+  <style>
+    
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    @page { size: auto; margin: 0; }
+    body { max-width: 780px; margin: 0 auto; padding: 0 1.5em; background: #fff; }
+    .cover { padding-top: 0; margin-top: 0; margin-bottom: 2.5em; }
+    .cover .brand { font-family: 'Georgia', serif; }
+    .article { page-break-before: auto; border-top: 3px solid #1a1a1a; padding-top: 2em; margin-top: 3em; }
+    .toc { margin: 2em 0 3em; padding: 1.2em 1.5em; background: #f0f4ff; border-left: 4px solid #2563eb; border-radius: 0 6px 6px 0; }
+    .toc h2 { margin: 0 0 0.6em; font-size: 10pt; text-transform: uppercase; letter-spacing: 0.1em; color: #2563eb; }
+    .toc ol { margin: 0; padding-left: 1.2em; }
+    .toc li { margin-bottom: 0.35em; font-size: 11pt; }
+    .toc a { color: #1a1a1a; text-decoration: none; }
+    .toc a:hover { color: #2563eb; text-decoration: underline; }
+    
+    /* ===== CSS Paged Media (WeasyPrint) ===== */
+@page {
+    size: A4;
+    margin: 2.5cm 2cm 2.5cm 2cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 10pt;
+        color: #888;
+        font-family: 'Georgia', serif;
+    }
+}
+
+/* ===== Base ===== */
+body {
+    font-family: 'Georgia', serif;
+    font-size: 11pt;
+    color: #1a1a1a;
+    line-height: 1.75;
+    background: #fff;
+}
+
+/* ===== Cover ===== */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 8cm;
+}
+
+.cover .brand-wrap {
+    display: inline-block;
+    text-align: left;
+}
+
+.cover .brand {
+    font-size: 52pt;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.cover .brand-ai {
+    color: #2563eb;
+}
+
+.cover .brand-sep {
+    color: #1a1a1a;
+}
+
+.cover .brand-weekly {
+    color: #1a1a1a;
+}
+
+.cover .brand-rule {
+    width: 130%;
+    height: 2px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    margin: 0 -15% 0.4em;
+    border-radius: 2px;
+}
+
+.cover .brand-tagline {
+    font-size: 10pt;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #888;
+    margin-bottom: 1.6em;
+}
+
+.cover .issue-date {
+    font-size: 13pt;
+    color: #444;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3em;
+}
+
+.cover .article-count {
+    font-size: 10pt;
+    color: #888;
+    font-style: italic;
+}
+
+/* ===== Article ===== */
+.article {
+    page-break-before: always;
+}
+
+.article-header {
+    border-bottom: 3px solid #1a1a1a;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.6em;
+}
+
+.article h1 {
+    font-size: 28pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 0.3em 0;
+    color: #1a1a1a;
+}
+
+.article .subtitle {
+    font-size: 13pt;
+    font-style: italic;
+    color: #444;
+    margin: 0 0 0.4em 0;
+    line-height: 1.4;
+}
+
+.article .meta {
+    font-size: 9pt;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ===== Article body ===== */
+.article-body p {
+    font-size: 11pt;
+    line-height: 1.75;
+    text-align: justify;
+    hyphens: auto;
+    margin: 0 0 0.85em 0;
+    text-indent: 1.2em;
+}
+
+.article-body p:first-of-type {
+    text-indent: 0;
+}
+
+.article-body p:first-of-type::first-letter {
+    font-size: 3.2em;
+    font-weight: bold;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.08em;
+    margin-top: 0.05em;
+    color: #1a1a1a;
+}
+
+/* ===== Tags + source ===== */
+.article-footer {
+    margin-top: 2em;
+    padding-top: 0.8em;
+    border-top: 1px solid #ccc;
+    font-size: 9pt;
+    color: #888;
+}
+
+.article-footer .tags {
+    margin-bottom: 0.3em;
+}
+
+.article-footer a {
+    color: #555;
+}
+
+  </style>
+</head>
+<body>
+<div class="cover">
+    <div class="brand-wrap">
+        <div class="brand">
+            <span class="brand-ai">AI</span><span class="brand-sep"> </span><span class="brand-weekly">Weekly</span>
+        </div>
+        <div class="brand-rule"></div>
+    </div>
+    <div class="brand-tagline">Your curated weekly digest of artificial intelligence</div>
+    <div class="issue-date">March 02, 2026</div>
+</div>
+<nav class="toc">
+  <h2>This Week</h2>
+  <ol><li><a href="#article-1">Three Tiers of AI-Assisted Coding Emerging Today</a></li><li><a href="#article-2">AI Could Reshape Economic Growth in Developing Nations</a></li><li><a href="#article-3">Why Internet-Scale Data Unlocked AI Generalization</a></li><li><a href="#article-4">Coding Agents Hit a Tipping Point After December 2025</a></li><li><a href="#article-5">Anthropic Accuses Chinese AI Labs of Mass Distillation</a></li><li><a href="#article-6">AI Industry Floods Zone with Agents, Models, Speed</a></li><li><a href="#article-7">Simon Willison Launches Agentic Engineering Patterns Guide</a></li><li><a href="#article-8">Sebastian Raschka's Blog Maps the LLM Landscape</a></li><li><a href="#article-9">Huyenchip's Blog Charts the Evolution of AI Engineering</a></li></ol>
+</nav>
+<div class="article" id="article-1">
+    <div class="article-header">
+        <h1>Three Tiers of AI-Assisted Coding Emerging Today</h1>
+        
+        <p class="meta">YOUTUBE &nbsp;·&nbsp; 2026-03-02</p>
+    </div>
+    <div class="article-body">
+        <p>Developers currently fall into three distinct camps when it comes to using LLMs for coding: purists who write everything from scratch, intermediates who leverage AI autocomplete while remaining the architect of their code, and those who fully delegate tasks to AI agents like Cursor or similar tools. This framework matters because choosing the wrong mode for the wrong task wastes time or produces brittle code — and most developers haven't yet built good intuition for when to switch between them. AI agents excel at boilerplate and commonly-seen patterns (since those are well-represented in training data), but they struggle with novel architecture and nuanced design decisions. The key takeaway is that these are all tools in your belt, not identities to adopt; learning when each approach fits is the real skill that separates productive developers from those fighting their workflow.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: ai-coding, developer-tools, llm-agents</p>
+        
+        <p>Source: <a href="https://www.youtube.com/watch?v=MqarkPmYI9Y">https://www.youtube.com/watch?v=MqarkPmYI9Y</a></p>
+    </div>
+</div><div class="article" id="article-2">
+    <div class="article-header">
+        <h1>AI Could Reshape Economic Growth in Developing Nations</h1>
+        
+        <p class="meta">YOUTUBE &nbsp;·&nbsp; 2026-03-02</p>
+    </div>
+    <div class="article-body">
+        <p>This discussion explores how AI disrupts the traditional model of economic catch-up growth, where developing countries historically leveraged cheap, underutilized labor combined with foreign capital and expertise to grow rapidly. The concern is significant: if AI removes labor as the key growth ingredient, the developing world could be permanently locked out of prosperity. Rather than relying solely on philanthropy from AI-wealthy nations, the speaker argues for deliberately placing AI infrastructure and AI-driven industries — like data centers and biotech startups — in developing countries, ensuring local talent plays a role in supervising and building these ventures during the transition period. The key takeaway is that the window to include the developing world in AI-driven economic growth is now, while humans still play a meaningful role in launching and overseeing AI systems, and deliberate investment decisions today will determine whether AI narrows or widens global inequality.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: global-development, ai-economics, inequality</p>
+        
+        <p>Source: <a href="https://www.youtube.com/watch?v=7nJ0nAZF_R4">https://www.youtube.com/watch?v=7nJ0nAZF_R4</a></p>
+    </div>
+</div><div class="article" id="article-3">
+    <div class="article-header">
+        <h1>Why Internet-Scale Data Unlocked AI Generalization</h1>
+        
+        <p class="meta">YOUTUBE &nbsp;·&nbsp; 2026-03-02</p>
+    </div>
+    <div class="article-body">
+        <p>Early language models like GPT-1 were trained on narrow datasets—GPT-1 itself learned from fanfiction—and failed to generalize across diverse text types. It wasn't until GPT-2, trained on broad internet scrapes from sources like Common Crawl and Reddit links, that models began showing real generalization across tasks. This matters because it reveals that the breadth and diversity of training data, not just model architecture, was the critical unlock for the generalist AI systems we use today. However, there's a lingering puzzle: these models consume trillions of tokens during pre-training, while humans acquire language from far fewer examples, pointing to a massive sample-efficiency gap that remains unsolved. The key takeaway is that scaling data diversity drove the generalization breakthrough, but closing the gap between machine and human learning efficiency is the next frontier.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: training-data, language-models, generalization</p>
+        
+        <p>Source: <a href="https://www.youtube.com/watch?v=XLuI5RiMncA">https://www.youtube.com/watch?v=XLuI5RiMncA</a></p>
+    </div>
+</div><div class="article" id="article-4">
+    <div class="article-header">
+        <h1>Coding Agents Hit a Tipping Point After December 2025</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>A comprehensive AI News roundup argues that coding agents underwent a genuine "phase change" starting in December 2025, moving from brittle demos to reliable, long-horizon task completion—a claim backed by Andrej Karpathy's detailed account of delegating complex multi-step deployments with minimal intervention. This matters because the entire developer tooling landscape is shifting in response: Perplexity launched "Computer," an orchestration-first agent that routes tasks across specialized sub-agents rather than running a single chat loop; OpenAI shipped GPT-5.3-Codex with meaningful speed and efficiency gains; GitHub Copilot CLI hit general availability with deep repo-wide research capabilities; and Alibaba's Qwen3.5 MoE models now enable credible local agent loops on consumer hardware activating only ~3B parameters per token. Yet researchers caution that agent <em>reliability</em> still lags far behind raw capability—failures tend to compound through small errors rather than stem from missing skills, and benchmark scores remain noisy and easy to over-interpret. The key takeaway is that coding agents are no longer a novelty but are rapidly becoming infrastructure, and engineering teams need to focus less on which model tops leaderboards and more on building robust orchestration, observability, and failure-handling into their agentic workflows.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: coding-agents, developer-tools, agentic-workflows</p>
+        
+        <p>Source: <a href="https://wtfhappened2025.com/">https://wtfhappened2025.com/</a></p>
+    </div>
+</div><div class="article" id="article-5">
+    <div class="article-header">
+        <h1>Anthropic Accuses Chinese AI Labs of Mass Distillation</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>Anthropic has publicly alleged that DeepSeek, Moonshot AI, and MiniMax ran industrial-scale "distillation attacks" against Claude, using roughly 24,000 fraudulent accounts to generate over 16 million model exchanges aimed at extracting capabilities for their own systems. The claim matters because it reframes frontier AI security: if a model's knowledge can be systematically copied through its API outputs, then export controls and weight secrecy alone are insufficient, and labs must invest heavily in abuse detection, behavioral fingerprinting, and watermarking. The AI community's reaction was sharply split — many called it hypocritical given that Western labs trained on the open internet, while others argued that replicating tool use, agent behaviors, and safety bypasses at scale is a qualitatively different threat. The key takeaway is that API-level output protection is fast becoming the critical battleground for AI competitive advantage and safety enforcement, and the industry has no consensus yet on where legitimate use ends and distillation begins.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: anthropic, distillation, deepseek, ai-security, export-controls</p>
+        
+        <p>Source: <a href="https://www.latent.space/p/2026">https://www.latent.space/p/2026</a></p>
+    </div>
+</div><div class="article" id="article-6">
+    <div class="article-header">
+        <h1>AI Industry Floods Zone with Agents, Models, Speed</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>The AI ecosystem saw a concentrated burst of launches in late February 2026: Alibaba's Qwen 3.5 series proved that architecture and data efficiency can beat brute-force parameter scaling, OpenAI shipped GPT-5.3-Codex with websocket-driven agent speed gains, Anthropic launched "Remote Control" for Claude Code enabling phone-to-terminal continuity, Cursor pivoted to agents that demo their own work via video instead of diffs, and Inception Labs' Mercury 2 hit ~1,000 tokens/second using diffusion-based language modeling. The throughline is that raw benchmark intelligence is no longer the primary differentiator — latency, reliability, and developer workflow integration are becoming the real battlegrounds. Critically, a Princeton study formalized what practitioners already feel: agent reliability is not keeping pace with capability, with safety bypasses as simple as splitting dangerous commands into routine-looking steps. The key takeaway for builders is that 2026's winners will be determined less by who has the smartest model and more by who ships the most dependable, fastest, and most practically integrated agent experience.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: frontier-models, coding-agents, agent-reliability</p>
+        
+        <p>Source: <a href="https://www.latent.space/p/2026">https://www.latent.space/p/2026</a></p>
+    </div>
+</div><div class="article" id="article-7">
+    <div class="article-header">
+        <h1>Simon Willison Launches Agentic Engineering Patterns Guide</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>Simon Willison has begun publishing Agentic Engineering Patterns, a growing collection of chapter-shaped guides documenting best practices for professional developers using coding agents like Claude Code and OpenAI Codex — tools that can generate, execute, and iterate on code autonomously. This matters because as the cost of producing initial working code drops to near zero, developers need new mental models and workflows to maintain quality and leverage these tools effectively. The first two chapters cover how cheap code generation reshapes development intuitions and how red/green test-driven development helps agents produce more reliable output. The key takeaway: treat agentic engineering as a distinct discipline from vibe coding — it's about amplifying existing expertise, not replacing it — and structured practices like TDD are proving essential for keeping AI-assisted development on the rails.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: agentic-coding, software-engineering, developer-tools</p>
+        
+        <p>Source: <a href="https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/">https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/</a></p>
+    </div>
+</div><div class="article" id="article-8">
+    <div class="article-header">
+        <h1>Sebastian Raschka's Blog Maps the LLM Landscape</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-02</p>
+    </div>
+    <div class="article-body">
+        <p>Sebastian Raschka's technical blog is a continuously updated, deeply detailed resource covering LLM architectures, reasoning models, inference-time scaling, and hands-on implementation guides — spanning from building tokenizers and KV caches from scratch to analyzing flagship releases like DeepSeek V3, Qwen3, and OpenAI's gpt-oss. For AI practitioners and researchers, this matters because Raschka consistently distills dense, fast-moving research into structured, code-grounded explanations that few other sources match in both breadth and depth. His early-2026 posts on open-weight architecture comparisons and inference-time compute scaling are especially valuable as the field shifts toward reasoning-optimized models and reinforcement learning techniques like GRPO. The key takeaway: if you need a single bookmark to stay current on how LLMs are actually built, trained, and evaluated — with real code, not just hype — this blog is it.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: LLM-research, open-weight-models, inference-scaling</p>
+        
+        <p>Source: <a href="https://magazine.sebastianraschka.com/subscribe">https://magazine.sebastianraschka.com/subscribe</a></p>
+    </div>
+</div><div class="article" id="article-9">
+    <div class="article-header">
+        <h1>Huyenchip's Blog Charts the Evolution of AI Engineering</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-02</p>
+    </div>
+    <div class="article-body">
+        <p>Huyenchip's blog is a long-running, practitioner-focused resource covering the full arc of modern AI engineering — from foundational ML systems design and real-time inference to the latest challenges in building generative AI applications and AI agents. It matters because the blog consistently translates bleeding-edge research into actionable production guidance, with standout posts on LLM deployment pitfalls, RLHF, multimodal models, and surveys of hundreds of open-source AI tools. The key takeaway: if you're building AI products, this is one of the most reliable single-author blogs for understanding not just what's new, but what actually works when you ship it.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: generative-ai, mlops, ai-engineering</p>
+        
+        <p>Source: <a href="https://goodailist.com">https://goodailist.com</a></p>
+    </div>
+</div>
+</body>
+</html>

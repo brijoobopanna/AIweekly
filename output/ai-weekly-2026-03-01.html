@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Weekly — March 01, 2026</title>
+  <style>
+    
+    @page { size: auto; margin: 0; }
+    body { max-width: 780px; margin: 0 auto; padding: 2em 1.5em; }
+    .cover { padding-top: 4em; margin-bottom: 3em; }
+    .article { page-break-before: auto; border-top: 3px solid #1a1a1a; padding-top: 2em; margin-top: 3em; }
+    .toc { margin: 2em 0 3em; padding: 1.2em 1.5em; background: #f7f7f7; border-left: 4px solid #1a1a1a; }
+    .toc h2 { margin: 0 0 0.6em; font-size: 11pt; text-transform: uppercase; letter-spacing: 0.08em; color: #888; }
+    .toc ol { margin: 0; padding-left: 1.2em; }
+    .toc li { margin-bottom: 0.35em; font-size: 11pt; }
+    .toc a { color: #1a1a1a; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    
+    /* ===== CSS Paged Media (WeasyPrint) ===== */
+@page {
+    size: A4;
+    margin: 2.5cm 2cm 2.5cm 2cm;
+    @bottom-center {
+        content: counter(page);
+        font-size: 10pt;
+        color: #888;
+        font-family: 'Georgia', serif;
+    }
+}
+
+/* ===== Base ===== */
+body {
+    font-family: 'Georgia', serif;
+    font-size: 11pt;
+    color: #1a1a1a;
+    line-height: 1.75;
+    background: #fff;
+}
+
+/* ===== Cover ===== */
+.cover {
+    page-break-after: always;
+    text-align: center;
+    padding-top: 8cm;
+}
+
+.cover .brand {
+    font-size: 48pt;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    border-bottom: 4px solid #1a1a1a;
+    display: inline-block;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.4em;
+}
+
+.cover .issue-date {
+    font-size: 14pt;
+    color: #444;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.3em;
+}
+
+.cover .article-count {
+    font-size: 11pt;
+    color: #666;
+    font-style: italic;
+}
+
+/* ===== Article ===== */
+.article {
+    page-break-before: always;
+}
+
+.article-header {
+    border-bottom: 3px solid #1a1a1a;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.6em;
+}
+
+.article h1 {
+    font-size: 28pt;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0 0.3em 0;
+    color: #1a1a1a;
+}
+
+.article .subtitle {
+    font-size: 13pt;
+    font-style: italic;
+    color: #444;
+    margin: 0 0 0.4em 0;
+    line-height: 1.4;
+}
+
+.article .meta {
+    font-size: 9pt;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ===== Article body ===== */
+.article-body p {
+    font-size: 11pt;
+    line-height: 1.75;
+    text-align: justify;
+    hyphens: auto;
+    margin: 0 0 0.85em 0;
+    text-indent: 1.2em;
+}
+
+.article-body p:first-of-type {
+    text-indent: 0;
+}
+
+.article-body p:first-of-type::first-letter {
+    font-size: 3.2em;
+    font-weight: bold;
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.08em;
+    margin-top: 0.05em;
+    color: #1a1a1a;
+}
+
+/* ===== Tags + source ===== */
+.article-footer {
+    margin-top: 2em;
+    padding-top: 0.8em;
+    border-top: 1px solid #ccc;
+    font-size: 9pt;
+    color: #888;
+}
+
+.article-footer .tags {
+    margin-bottom: 0.3em;
+}
+
+.article-footer a {
+    color: #555;
+}
+
+  </style>
+</head>
+<body>
+<div class="cover">
+    <div class="brand">AI Weekly</div>
+    <div class="issue-date">March 01, 2026</div>
+    <div class="article-count">4 articles this week</div>
+</div>
+<nav class="toc">
+  <h2>This Week</h2>
+  <ol><li><a href="#article-1">Coding Agents Hit a Tipping Point After December 2025</a></li><li><a href="#article-2">Anthropic Accuses Chinese AI Labs of Mass Distillation</a></li><li><a href="#article-3">AI Industry Floods Zone with Agents, Models, Speed</a></li><li><a href="#article-4">Simon Willison Launches Agentic Engineering Patterns Guide</a></li></ol>
+</nav>
+<div class="article" id="article-1">
+    <div class="article-header">
+        <h1>Coding Agents Hit a Tipping Point After December 2025</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>A comprehensive AI News roundup argues that coding agents underwent a genuine "phase change" starting in December 2025, moving from brittle demos to reliable, long-horizon task completion—a claim backed by Andrej Karpathy's detailed account of delegating complex multi-step deployments with minimal intervention. This matters because the entire developer tooling landscape is shifting in response: Perplexity launched "Computer," an orchestration-first agent that routes tasks across specialized sub-agents rather than running a single chat loop; OpenAI shipped GPT-5.3-Codex with meaningful speed and efficiency gains; GitHub Copilot CLI hit general availability with deep repo-wide research capabilities; and Alibaba's Qwen3.5 MoE models now enable credible local agent loops on consumer hardware activating only ~3B parameters per token. Yet researchers caution that agent <em>reliability</em> still lags far behind raw capability—failures tend to compound through small errors rather than stem from missing skills, and benchmark scores remain noisy and easy to over-interpret. The key takeaway is that coding agents are no longer a novelty but are rapidly becoming infrastructure, and engineering teams need to focus less on which model tops leaderboards and more on building robust orchestration, observability, and failure-handling into their agentic workflows.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: coding-agents, developer-tools, agentic-workflows</p>
+        
+        <p>Source: <a href="https://wtfhappened2025.com/">https://wtfhappened2025.com/</a></p>
+    </div>
+</div><div class="article" id="article-2">
+    <div class="article-header">
+        <h1>Anthropic Accuses Chinese AI Labs of Mass Distillation</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>Anthropic has publicly alleged that DeepSeek, Moonshot AI, and MiniMax ran industrial-scale "distillation attacks" against Claude, using roughly 24,000 fraudulent accounts to generate over 16 million model exchanges aimed at extracting capabilities for their own systems. The claim matters because it reframes frontier AI security: if a model's knowledge can be systematically copied through its API outputs, then export controls and weight secrecy alone are insufficient, and labs must invest heavily in abuse detection, behavioral fingerprinting, and watermarking. The AI community's reaction was sharply split — many called it hypocritical given that Western labs trained on the open internet, while others argued that replicating tool use, agent behaviors, and safety bypasses at scale is a qualitatively different threat. The key takeaway is that API-level output protection is fast becoming the critical battleground for AI competitive advantage and safety enforcement, and the industry has no consensus yet on where legitimate use ends and distillation begins.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: anthropic, distillation, deepseek, ai-security, export-controls</p>
+        
+        <p>Source: <a href="https://www.latent.space/p/2026">https://www.latent.space/p/2026</a></p>
+    </div>
+</div><div class="article" id="article-3">
+    <div class="article-header">
+        <h1>AI Industry Floods Zone with Agents, Models, Speed</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>The AI ecosystem saw a concentrated burst of launches in late February 2026: Alibaba's Qwen 3.5 series proved that architecture and data efficiency can beat brute-force parameter scaling, OpenAI shipped GPT-5.3-Codex with websocket-driven agent speed gains, Anthropic launched "Remote Control" for Claude Code enabling phone-to-terminal continuity, Cursor pivoted to agents that demo their own work via video instead of diffs, and Inception Labs' Mercury 2 hit ~1,000 tokens/second using diffusion-based language modeling. The throughline is that raw benchmark intelligence is no longer the primary differentiator — latency, reliability, and developer workflow integration are becoming the real battlegrounds. Critically, a Princeton study formalized what practitioners already feel: agent reliability is not keeping pace with capability, with safety bypasses as simple as splitting dangerous commands into routine-looking steps. The key takeaway for builders is that 2026's winners will be determined less by who has the smartest model and more by who ships the most dependable, fastest, and most practically integrated agent experience.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: frontier-models, coding-agents, agent-reliability</p>
+        
+        <p>Source: <a href="https://www.latent.space/p/2026">https://www.latent.space/p/2026</a></p>
+    </div>
+</div><div class="article" id="article-4">
+    <div class="article-header">
+        <h1>Simon Willison Launches Agentic Engineering Patterns Guide</h1>
+        
+        <p class="meta">WEB &nbsp;·&nbsp; 2026-03-01</p>
+    </div>
+    <div class="article-body">
+        <p>Simon Willison has begun publishing Agentic Engineering Patterns, a growing collection of chapter-shaped guides documenting best practices for professional developers using coding agents like Claude Code and OpenAI Codex — tools that can generate, execute, and iterate on code autonomously. This matters because as the cost of producing initial working code drops to near zero, developers need new mental models and workflows to maintain quality and leverage these tools effectively. The first two chapters cover how cheap code generation reshapes development intuitions and how red/green test-driven development helps agents produce more reliable output. The key takeaway: treat agentic engineering as a distinct discipline from vibe coding — it's about amplifying existing expertise, not replacing it — and structured practices like TDD are proving essential for keeping AI-assisted development on the rails.</p>
+    </div>
+    <div class="article-footer">
+        
+        <p class="tags">Topics: agentic-coding, software-engineering, developer-tools</p>
+        
+        <p>Source: <a href="https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/">https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/</a></p>
+    </div>
+</div>
+</body>
+</html>
